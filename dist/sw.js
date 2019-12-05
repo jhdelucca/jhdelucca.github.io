@@ -14,6 +14,19 @@ self.addEventListener('install', function (e) {
     );
 });
 
+self.addEventListener('activate', event => {
+    event.waitUntil(
+      caches.keys().then(cacheNames => {
+        return Promise.all(
+          cacheNames
+            .filter(cacheName => (cacheName.startsWith('localhost')))
+            .filter(cacheName => (cacheName !== 'localhost'))
+            .map(cacheName => caches.delete(cacheName))
+        );
+      })
+    );
+  });
+
 self.addEventListener("fetch", function (event) {
     console.log(event.request.url);
 
