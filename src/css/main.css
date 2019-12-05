@@ -1,0 +1,19 @@
+/** Metodologia OOCSS utilizando os conceitos passados em sala organizado atravez do processador SASS **/
+.container {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+  .container .titulo {
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-style: italic; }
+  .container .green-titulo {
+    color: green; }
+  .container .borda {
+    border: 1px solid black; }
+  .container .margem {
+    margin-left: 2em; }
+  .container .cor-fundo {
+    background-color: red; }
+
+/*# sourceMappingURL=main.css.map */

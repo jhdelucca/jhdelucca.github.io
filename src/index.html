@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="pt-br">
+<!-- Acessibilidade para especificar idioma -->
+
+<head>
+	<meta charset="utf-8">
+	<title>Projeto Front-end</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+	<meta name="theme-color" content="#fafafa">
+</head>
+
+<body>
+	<div class="container" role="main">
+		<!-- Acessibilidade para especificar roles  -->
+		<h1 class="titulo green-titulo">API Canvas</h1>
+
+		<canvas height="550" width="800" class="margem borda cor-fundo">
+			<!-- Acessibilidade para contextualizada imagem  -->
+			<a href=”#“>área que tem um quadrado já previamente desenhado, que irá movimentar através das teclas de
+				direção do teclado</a>
+		</canvas>
+
+	</div>
+
+	<script>
+		if ('serviceWorker' in navigator) {
+			navigator.serviceWorker
+				.register('/sw.js')
+				.then(function () { console.log("Service Worker Registered"); });
+		}
+	</script>
+</body>
+
+</html>

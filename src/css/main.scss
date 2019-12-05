@@ -1,0 +1,40 @@
+/** Metodologia OOCSS **/
+
+$verde-color: green;
+$vermelho-color: red;
+
+@mixin position($value) {
+    margin-left: $value;
+}
+
+.container {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+.titulo {
+    text-align: center;
+    font: {
+        family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        style: italic;
+    }  
+}
+.green-titulo {
+    color: $verde-color;
+}
+
+.borda {
+    border: 1px solid black;
+    
+}
+
+.margem {
+    @include position(2em) ;
+}
+
+.cor-fundo {
+  background-color: $vermelho-color;
+}
+
+}
+
