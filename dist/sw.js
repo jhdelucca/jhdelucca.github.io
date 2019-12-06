@@ -1,9 +1,11 @@
 importScripts('/cache-polyfill.js');
 
+const staticCacheName = 'projeto-frontEnd'
+
 
 self.addEventListener('install', function (e) {
     e.waitUntil(
-        caches.open('localhost').then(function (cache) {
+        caches.open(staticCacheName).then(function (cache) {
             return cache.addAll([
                 "bundle.js",
                 "index.html",
@@ -19,8 +21,7 @@ self.addEventListener('activate', event => {
       caches.keys().then(cacheNames => {
         return Promise.all(
           cacheNames
-            .filter(cacheName => (cacheName.startsWith('localhost')))
-            .filter(cacheName => (cacheName !== 'localhost'))
+            .filter(cacheName => (cacheName !== staticCacheName))
             .map(cacheName => caches.delete(cacheName))
         );
       })

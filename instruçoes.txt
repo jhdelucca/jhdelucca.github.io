@@ -1,0 +1,12 @@
+Service worker: Meu dominio do github pages não está funcionando o service worker, mas esta
+implementado no codigo fonte e  se fizer o clone do git e roda a aplicação localmente, 
+vai aparecer o serviço registrado.
+
+Uso https e redirecionamento para https: o dominio do github pages já usa o https e se digitar
+o dominio com http ele redireciona para https.
+
+Site responsivo e rapido com a meta tag view port
+
+Tema cor de site com a tag meta theme-color
+
+Manifesto com informações do site no package.json
